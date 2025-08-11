@@ -68,6 +68,7 @@
                 </div>
                 <!--end::Title-->
                 <!--begin::Form group-->
+                <input type="hidden" id="email-otp">
                 <div class="form-group">
                     <label class="font-size-h6 font-weight-bolder text-dark">Mã OTP</label> <label style="color: red;">*</label>
                     <input id="otp" type="text"
@@ -78,7 +79,7 @@
                 <!--end::Form group-->
                 <!--begin::Form group-->
                 <div style="display: flex; padding-top: 22.75px;">
-                    <button id="forgot-btn" type="button"
+                    <button id="confirm-btn" type="button"
                         style="color: #FFFFFF;
                             background-color: #187DE4;
                             font-size: 1.175rem;
@@ -86,7 +87,7 @@
                             border: none;
                             padding: 13px 26px;
                             border-radius: 0.42rem;">
-                        Tiếp tục
+                        Xác nhận
                     </button>
                 </div>
                 <!--end::Form group-->

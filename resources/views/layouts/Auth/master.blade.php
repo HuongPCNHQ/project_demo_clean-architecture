@@ -125,6 +125,8 @@
 	<!--begin::Page Scripts(used by this page)-->
 	<script src="/Auth/assets/js/pages/custom/login/login-4.js"></script>
 	<!--end::Page Scripts-->
+	<script src="/Auth/assets/js/pages/register.js"></script>
+	<script src="/Auth/assets/js/pages/verify-otp.js"></script>
 </body>
 <!--end::Body-->
 

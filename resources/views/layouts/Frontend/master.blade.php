@@ -152,8 +152,8 @@
                             <div class="topbar-item">
                                 <div class="update-hover"
                                     id="">
-                                    <Button id="btn-signup" class="btnAuth">Đăng ký</Button>
-                                    <Button id="btn-login" class="btnAuth">Đăng nhập</Button>
+                                    <Button id="btn-signup" class="btnAuth"><a style="color: white;font-weight: 500;" href="/register">Đăng ký</a></Button>
+                                    <Button id="btn-login" class="btnAuth"><a style="color: white;font-weight: 500;" href="/login">Đăng nhập</a></Button>
                                 </div>
                             </div>
 
@@ -286,7 +286,6 @@
     <!--begin::Page Scripts(used by this page)-->
     <script src="/frontend/assets/js/pages/widgets.js"></script>
     <!--end::Page Scripts-->
-    
 </body>
 <!--end::Body-->
 
