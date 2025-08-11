@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Infrastructure\Persistence\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -19,8 +19,16 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'phone',
         'email',
+        'email_verified_at',
         'password',
+        'remember_token',
+        'is_active',
+        'otp_code',
+        'otp_expires_at', 
+        'two_fa_enabled',
+        'two_fa_secret',
     ];
 
     /**
@@ -31,6 +39,7 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
+        'two_fa_secret',
     ];
 
     /**
@@ -43,6 +52,8 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'two_fa_enabled'    => 'boolean',
+            'otp_expires_at'    => 'datetime',
         ];
     }
 }
