@@ -17,14 +17,26 @@ class RegisterController extends Controller{
 
     public function register(RegisterRequest $request)
     {
-        $user = $this->authUsecase->register($request->validated());
+        try {
+            $user = $this->authUsecase->register($request->validated());
 
-        $result = new DataResult(
-            'Đăng ký thành công. Vui lòng kiểm tra email để nhận OTP.',
-            201,
-            $user
-        );
-        return response()->json($result);
+            $result = new DataResult(
+                'Đăng ký thành công. Vui lòng kiểm tra email để nhận OTP.',
+                201,
+                $user
+            );
+
+            return response()->json($result);
+            
+        } catch (\Exception $e) {
+            $result = new DataResult(
+                $e->getMessage(),
+                400,
+                null
+            );
+
+            return response()->json($result);
+        }
 
     }
 

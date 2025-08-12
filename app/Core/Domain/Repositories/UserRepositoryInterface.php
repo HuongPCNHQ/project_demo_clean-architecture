@@ -8,6 +8,7 @@ interface UserRepositoryInterface {
     public function findById(int $id): ?UserEntity;
     public function findByEmail(string $email): ?UserEntity;
     public function save(UserEntity $user): UserEntity;
+    public function updatePassword(string $email, string $hashedPassword): bool;
 
     // 2FA methods
     public function enableTwoFA(int $userId, string $secret): bool;

@@ -6,10 +6,8 @@ Route::get('/', function () {
     return view('layouts.Frontend.Pages.home');
 });
 
-//Frontend
-Route::get('/home', function () {
-    return view('layouts.Frontend.Pages.home');
-});
+//Auth
+
 Route::get('/login', function () {
     return view('layouts.Auth.Pages.login');
 });
@@ -19,8 +17,16 @@ Route::get('/register', function () {
 Route::get('/forgot-password', function () {
     return view('layouts.Auth.Pages.forgot-password');
 });
+Route::get('/reset-password', function () {
+    return view('layouts.Auth.Pages.reset-password');
+});
 Route::get('/verify-otp', function () {
     return view('layouts.Auth.Pages.verify-otp');
+});
+
+//Frontend
+Route::get('/home', function () {
+    return view('layouts.Frontend.Pages.home');
 });
 Route::get('/showqr', function () {
     return view('layouts.Frontend.Pages.showqr');

@@ -17,7 +17,7 @@ class UserRepositories implements UserRepositoryInterface {
     public function findByEmail(string $email): ?UserEntity
     {
         $model = User::where('email', $email)->first();
-        return $model ? new UserEntity($model->toArray()) : null;
+        return $model ? new UserEntity($model->getAttributes()) : null;
     }
 
     public function save(UserEntity $user): UserEntity
@@ -81,6 +81,13 @@ class UserRepositories implements UserRepositoryInterface {
             'is_active' => 1,
             'otp_code' => null,
             'otp_expires_at' => null
+        ]) > 0;
+    }
+
+    public function updatePassword(string $email, string $hashedPassword): bool
+    {
+        return User::where('email', $email)->update([
+            'password' => $hashedPassword
         ]) > 0;
     }
 }
