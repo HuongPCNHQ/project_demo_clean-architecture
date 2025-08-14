@@ -1,39 +1,42 @@
-function register() {
+function login() {
 
     const data = {
-        name: $('#name').val(),
-        phone: $('#phone').val(),
         email: $('#email').val(),
         password: $('#password').val(),
-        password_confirmation: $('#confirmPassword').val(),
     };
 
     $.ajax({
-        url: "/api/register",
+        url: "/api/login",
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify(data),
         success: function (response) {
-            window.location.href="/verify-otp";
+            alert(response.message);
+            if(response.data.user.role === "user"){
+                window.location.href="/home"
+            } else{
+                window.location.href="/admin/dashboard"
+            }
             sessionStorage.setItem('email', email.value);
+            sessionStorage.setItem('id', response.data.user.id);
         },
         error: function (xhr, status, error) {
             if (xhr.status === 422) {
                 const errors = xhr.responseJSON.errors;
                 $.each(errors, function (key, messages) {
-                    if (key === "password" && messages[0].includes("Mật khẩu xác nhận không khớp")) {
-                        $("#password_confirmation-error").text(messages[0]);
-                    } else {
-                        $(`#${key}-error`).text(messages[0]);
-                    }
+                    $(`#${key}-error`).text(messages[0]);
                 });
+            }
+            if (xhr.status === 400) {
+                
+                alert(xhr.responseJSON.message);
             }
         }
     });
 }
 
-$(document).on('click', '#register-btn', function (event) {
+$(document).on('click', '#login-btn', function (event) {
     event.preventDefault();
     $('.error').text('');
-    register();
+    login();
 });

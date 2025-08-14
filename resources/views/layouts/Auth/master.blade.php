@@ -127,6 +127,11 @@
 	<!--end::Page Scripts-->
 	<script src="/Auth/assets/js/pages/register.js"></script>
 	<script src="/Auth/assets/js/pages/verify-otp.js"></script>
+	<script src="/Auth/assets/js/pages/login.js"></script>
+	<script src="/Auth/assets/js/pages/forgot-password.js"></script>
+	<script src="/Auth/assets/js/pages/reset-password.js"></script>
+
+
 </body>
 <!--end::Body-->
 

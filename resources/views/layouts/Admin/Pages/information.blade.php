@@ -12,7 +12,7 @@
                     <span class="text-muted font-weight-bold font-size-sm mt-1">Update your personal informaiton</span>
                 </div>
                 <div class="card-toolbar">
-                    <button type="reset" class="btn btn-success mr-2">Save Changes</button>
+                    <button id="update-infor-btn" type="reset" class="btn btn-success mr-2">Save Changes</button>
                 </div>
             </div>
             <!--end::Header-->
@@ -23,10 +23,10 @@
                     <div class="row">
                         <label class="col-xl-3"></label>
                         <div class="col-lg-9 col-xl-6">
-                            <h5 class="font-weight-bold mb-6">Customer Info</h5>
+                            <h5 class="font-weight-bold mb-6">Personal Information</h5>
                         </div>
                     </div>
-                    <div class="form-group row">
+                    <!-- <div class="form-group row">
                         <label class="col-xl-3 col-lg-3 col-form-label">Avatar</label>
                         <div class="col-lg-9 col-xl-6">
                             <div class="image-input image-input-outline" id="kt_profile_avatar" style="background-image: url(assets/media/users/blank.png)">
@@ -44,11 +44,19 @@
                                 </span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
+                    <style>
+                        .error {
+                            color: red;
+                            font-size: 0.9em;
+                            margin-top: 3px;
+                        }
+                    </style>
                     <div class="form-group row">
                         <label class="col-xl-3 col-lg-3 col-form-label">Full Name</label>
                         <div class="col-lg-9 col-xl-6">
-                            <input class="form-control form-control-lg form-control-solid" type="text" value="Nick" />
+                            <input id="name" class="form-control form-control-lg form-control-solid" type="text" value="" />
+                            <div class="error" id="name-error"></div>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -60,8 +68,9 @@
                                         <i class="la la-at"></i>
                                     </span>
                                 </div>
-                                <input type="text" class="form-control form-control-lg form-control-solid" value="nick.bold@loop.com" placeholder="Email" />
+                                <input id="email" type="text" class="form-control form-control-lg form-control-solid" value="" placeholder="Email" />
                             </div>
+                            <div class="error" id="email-error"></div>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -73,8 +82,15 @@
                                         <i class="la la-phone"></i>
                                     </span>
                                 </div>
-                                <input type="text" class="form-control form-control-lg form-control-solid" value="+35278953712" placeholder="Phone" />
+                                <input id="phone" type="text" class="form-control form-control-lg form-control-solid" value="" placeholder="Phone" />
+                                <div class="error" id="phone-error"></div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-xl-3 col-lg-3 col-form-label">Role</label>
+                        <div class="col-lg-9 col-xl-6">
+                            <p id="role" class="form-control form-control-lg form-control-solid"></p>
                         </div>
                     </div>
                     

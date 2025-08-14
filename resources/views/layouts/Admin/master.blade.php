@@ -14,16 +14,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <!--end::Fonts-->
     <!--begin::Page Vendors Styles(used by this page)-->
-    <link href="/admin/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="/Admin/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Page Vendors Styles-->
     <!--begin::Global Theme Styles(used by all pages)-->
-    <link href="/admin/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-    <link href="/admin/assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
-    <link href="/admin/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="/Admin/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="/Admin/assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="/Admin/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
-    <link rel="shortcut icon" href="/admin/assets/media/logos/favicon.ico" />
+    <link rel="shortcut icon" href="/Admin/assets/media/logos/favicon.ico" />
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -35,7 +35,7 @@
     <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
         <!--begin::Logo-->
         <a href="index.html">
-            <img alt="Logo" class="w-45px" src="/admin/assets/media/logos/logo-letter-13.png" />
+            <img alt="Logo" class="w-45px" src="/Admin/assets/media/logos/logo-letter-13.png" />
         </a>
         <!--end::Logo-->
         <!--begin::Toolbar-->
@@ -53,7 +53,7 @@
             <!--begin::Topbar Mobile Toggle-->
             <button class="btn btn-hover-text-primary p-0 ml-2" id="kt_header_mobile_topbar_toggle">
                 <span class="svg-icon svg-icon-xl">
-                    <!--begin::Svg Icon | path:/admin/assets/media/svg/icons/General/User.svg-->
+                    <!--begin::Svg Icon | path:/Admin/assets/media/svg/icons/General/User.svg-->
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
                         height="24px" viewBox="0 0 24 24" version="1.1">
                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -83,7 +83,7 @@
                 <div class="brand flex-column-auto" id="kt_brand">
                     <!--begin::Logo-->
                     <a href="index.html" class="brand-logo">
-                        <img alt="Logo" class="w-65px" src="/admin/assets/media/logos/logo-letter-13.png" />
+                        <img alt="Logo" class="w-65px" src="/Admin/assets/media/logos/logo-letter-13.png" />
                     </a>
                     <!--end::Logo-->
                 </div>
@@ -96,7 +96,7 @@
                         <!--begin::Menu Nav-->
                         <ul class="menu-nav">
                             <li class="menu-item menu-item-active" aria-haspopup="true">
-                                <a href="/dashboard" class="menu-link">
+                                <a href="/admin/dashboard" class="menu-link">
                                     <i class="menu-icon flaticon2-architecture-and-city"></i>
                                     <span class="menu-text">Dashboard</span>
                                 </a>
@@ -126,14 +126,6 @@
                                                 <span class="menu-text">Add User</span>
                                             </a>
                                         </li>
-                                        <li class="menu-item" aria-haspopup="true">
-                                            <a href="/admin/edit-user" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-line">
-                                                    <span></span>
-                                                </i>
-                                                <span class="menu-text">Edit User</span>
-                                            </a>
-                                        </li>
                                     </ul>
                                 </div>
                             </li>
@@ -142,6 +134,12 @@
                                 <a href="/admin/change-password" class="menu-link menu-toggle">
                                     <i class="menu-icon flaticon2-laptop"></i>
                                     <span class="menu-text">Password</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="/admin/information" class="menu-link">
+                                    <i class="menu-icon flaticon2-graph-1"></i>
+                                    <span class="menu-text">Info</span>
                                 </a>
                             </li>
                             <!-- <li class="menu-item" aria-haspopup="true">
@@ -310,20 +308,26 @@
     </script>
     <!--end::Global Config-->
     <!--begin::Global Theme Bundle(used by all pages)-->
-    <script src="/admin/assets/plugins/global/plugins.bundle.js"></script>
-    <script src="/admin/assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
-    <script src="/admin/assets/js/scripts.bundle.js"></script>
+    <script src="/Admin/assets/plugins/global/plugins.bundle.js"></script>
+    <script src="/Admin/assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
+    <script src="/Admin/assets/js/scripts.bundle.js"></script>
     <!--end::Global Theme Bundle-->
     <!--begin::Page Vendors(used by this page)-->
-    <script src="/admin/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+    <script src="/Admin/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
     <!--end::Page Vendors-->
     <!--begin::Page Scripts(used by this page)-->
-    <script src="/admin/assets/js/pages/widgets.js"></script>
+    <script src="/Admin/assets/js/pages/widgets.js"></script>
     <!--end::Page Scripts-->
 
-    <script src="/admin/assets/js/home.js"></script>
-    <script src="/admin/assets/js/pages/account.js"></script>
-    <script src="/admin/assets/js/pages/showlog.js"></script>
+    <script src="/Frontend/assets/js/pages/information.js"></script>
+    <script src="/Frontend/assets/js/pages/change-password.js"></script>
+    <script src="/Admin/assets/js/pages/add-user.js"></script>
+    <script src="/Admin/assets/js/pages/list-user.js"></script>
+    <script src="/Admin/assets/js/pages/update-user.js"></script>
+    <script src="/Admin/assets/js/pages/delete-user.js"></script>
+    <script src="/Admin/assets/js/pages/change-password.js"></script>
+
+
 </body>
 <!--end::Body-->
 

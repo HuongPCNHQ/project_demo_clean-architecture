@@ -3,8 +3,8 @@
 namespace App\Interfaces\Http\Controllers\Auth;
 
 use App\Interfaces\Http\Controllers\Controller;
-use App\Core\Application\UseCase\AuthUsecase;
-use App\Interfaces\Http\Requests\RegisterRequest;
+use App\Core\Application\UseCase\Auth\AuthUsecase;
+use App\Interfaces\Http\Requests\Auth\RegisterRequest;
 use App\Core\Domain\DTO\DataResult;
 
 class RegisterController extends Controller{
@@ -17,14 +17,26 @@ class RegisterController extends Controller{
 
     public function register(RegisterRequest $request)
     {
-        $user = $this->authUsecase->register($request->validated());
+        try {
+            $user = $this->authUsecase->register($request->validated());
 
-        $result = new DataResult(
-            'Đăng ký thành công. Vui lòng kiểm tra email để nhận OTP.',
-            201,
-            $user
-        );
-        return response()->json($result);
+            $result = new DataResult(
+                'Đăng ký thành công. Vui lòng kiểm tra email để nhận OTP.',
+                201,
+                $user
+            );
+
+            return response()->json($result);
+            
+        } catch (\Exception $e) {
+            $result = new DataResult(
+                $e->getMessage(),
+                400,
+                null
+            );
+
+            return response()->json($result);
+        }
 
     }
 

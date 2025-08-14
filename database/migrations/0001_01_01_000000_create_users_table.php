@@ -16,12 +16,14 @@ return new class extends Migration
             $table->string('name');
             $table->string('phone')->nullable();
             $table->string('email')->unique();
+            $table->enum('role', ['user', 'admin'])->default('user');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->boolean('is_active')->default(0);
+            $table->boolean('is_lock')->default(0);
 
             // OTP xác thực
-            $table->boolean('is_active')->default(0);
             $table->string('otp_code')->nullable();
             $table->timestamp('otp_expires_at')->nullable();
 
