@@ -18,7 +18,7 @@
                                         <div class="my-5 step" data-wizard-type="step-content" data-wizard-state="current">
                                             <h5 class="text-dark font-weight-bold mb-10">User's Profile Details:</h5>
                                             <!--begin::Group-->
-                                            <div class="form-group row">
+                                            <!-- <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label text-left">Avatar</label>
                                                 <div class="col-lg-9 col-xl-9">
                                                     <div class="image-input image-input-outline" id="kt_user_add_avatar">
@@ -33,13 +33,21 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <!--end::Group-->
                                             <!--begin::Group-->
+                                            <style>
+                                                .error {
+                                                    color: red;
+                                                    font-size: 0.9em;
+                                                    margin-top: 3px;
+                                                }
+                                            </style>
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label">Full Name</label>
                                                 <div class="col-lg-9 col-xl-9">
-                                                    <input class="form-control form-control-solid form-control-lg" name="firstname" type="text" value="" />
+                                                    <input id="name" class="form-control form-control-solid form-control-lg" name="firstname" type="text" value="" />
+                                                    <div class="error" id="name-error"></div>
                                                 </div>
                                             </div>
                                             <!--end::Group-->
@@ -53,7 +61,8 @@
                                                                 <i class="la la-phone"></i>
                                                             </span>
                                                         </div>
-                                                        <input type="text" class="form-control form-control-solid form-control-lg" name="phone" placeholder="Phone" />
+                                                        <input id="phone" type="text" class="form-control form-control-solid form-control-lg" name="phone" placeholder="Phone" />
+                                                        <div class="error" id="phone-error"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -68,8 +77,23 @@
                                                                 <i class="la la-at"></i>
                                                             </span>
                                                         </div>
-                                                        <input type="text" class="form-control form-control-solid form-control-lg" name="email" value="" />
+                                                        <input id="email" type="email" class="form-control form-control-solid form-control-lg" name="email" value="" />
+                                                        <div class="error" id="email-error"></div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label">Password</label>
+                                                <div class="col-lg-9 col-xl-9">
+                                                    <input id="password" class="form-control form-control-solid form-control-lg" type="password" value="" />
+                                                    <div class="error" id="password-error"></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-xl-3 col-lg-3 col-form-label">Password Confirm</label>
+                                                <div class="col-lg-9 col-xl-9">
+                                                    <input id="confirmPassword" class="form-control form-control-solid form-control-lg" type="password" value="" />
+                                                    <div class="error" id="password_confirmation-error"></div>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
@@ -81,13 +105,12 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            
                                             <!--end::Group-->
                                         </div>
                                         <!--end::Wizard Step 1-->
                                         <div class="d-flex justify-content-between border-top pt-10 mt-15">
                                             <div>
-                                                <button type="button" id="next-step" class="btn btn-primary font-weight-bolder px-9 py-4" data-wizard-type="action-next">Add</button>
+                                                <button type="button" id="addUser-btn" class="btn btn-primary font-weight-bolder px-9 py-4" data-wizard-type="action-next">Add</button>
                                             </div>
                                         </div>
                                         <!--end::Wizard Actions-->

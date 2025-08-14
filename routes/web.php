@@ -24,6 +24,10 @@ Route::get('/verify-otp', function () {
     return view('layouts.Auth.Pages.verify-otp');
 });
 
+Route::get('/verify-2fa', function () {
+    return view('layouts.Auth.Pages.verify-2fa');
+});
+
 //Frontend
 Route::get('/home', function () {
     return view('layouts.Frontend.Pages.home');

@@ -9,11 +9,13 @@ class UserEntity{
     public ?string $name;
     public ?string $phone;
     public ?string $email;
+    public string $role;
     public ?Carbon $email_verified_at;
     public ?string $password;
     public ?string $remember_token;
     //xác thực otp
     public ?int $is_active;
+    public ?int $is_lock;
     public ?string $otp_code;
     public ?Carbon $otp_expires_at;
     //xác thực 2fa
@@ -29,10 +31,12 @@ class UserEntity{
         $this -> name = $data['name'] ?? null;
         $this -> phone = $data['phone'] ?? null;
         $this -> email = $data['email'] ?? null;
+        $this->role = $data['role'] ?? 'user';
         $this -> email_verified_at = isset($data['email_verified_at']) ? new Carbon($data['email_verified_at']) : null;
         $this -> password = $data['password'] ?? null;
         $this -> remember_token = $data['remember_token'] ?? null;
         $this->is_active = $data['is_active'] ?? 0;
+        $this->is_lock = $data['is_lock'] ?? 0;
         $this -> otp_code = $data['otp_code'] ?? null;
         $this -> otp_expires_at = isset($data['otp_expires_at']) ? new Carbon($data['otp_expires_at']) : null;
         $this -> two_fa_secret = $data['two_fa_secret'] ?? null;

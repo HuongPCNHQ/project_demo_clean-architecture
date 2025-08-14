@@ -14,16 +14,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <!--end::Fonts-->
     <!--begin::Page Vendors Styles(used by this page)-->
-    <link href="/frontend/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="/Frontend/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Page Vendors Styles-->
     <!--begin::Global Theme Styles(used by all pages)-->
-    <link href="/frontend/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-    <link href="/frontend/assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
-    <link href="/frontend/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="/Frontend/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="/Frontend/assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="/Frontend/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
-    <link rel="shortcut icon" href="/frontend/assets/media/logos/favicon.ico" />
+    <link rel="shortcut icon" href="/Frontend/assets/media/logos/favicon.ico" />
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -35,7 +35,7 @@
     <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
         <!--begin::Logo-->
         <a href="index.html">
-            <img alt="Logo" class="w-45px" src="/frontend/assets/media/logos/logo-letter-13.png" />
+            <img alt="Logo" class="w-45px" src="/Frontend/assets/media/logos/logo-letter-13.png" />
         </a>
         <!--end::Logo-->
         <!--begin::Toolbar-->
@@ -53,7 +53,7 @@
             <!--begin::Topbar Mobile Toggle-->
             <button class="btn btn-hover-text-primary p-0 ml-2" id="kt_header_mobile_topbar_toggle">
                 <span class="svg-icon svg-icon-xl">
-                    <!--begin::Svg Icon | path:/frontend/assets/media/svg/icons/General/User.svg-->
+                    <!--begin::Svg Icon | path:/Frontend/assets/media/svg/icons/General/User.svg-->
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
                         height="24px" viewBox="0 0 24 24" version="1.1">
                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -83,7 +83,7 @@
                 <div class="brand flex-column-auto" id="kt_brand">
                     <!--begin::Logo-->
                     <a href="index.html" class="brand-logo">
-                        <img alt="Logo" class="w-65px" src="/frontend/assets/media/logos/logo-letter-13.png" />
+                        <img alt="Logo" class="w-65px" src="/Frontend/assets/media/logos/logo-letter-13.png" />
                     </a>
                     <!--end::Logo-->
                 </div>
@@ -103,14 +103,14 @@
                             </li>
 
                             <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                                <a href="/update-password" class="menu-link menu-toggle">
+                                <a href="/change-password" class="menu-link menu-toggle">
                                     <i class="menu-icon flaticon2-laptop"></i>
                                     <span class="menu-text">Password</span>
                                 </a>
                             </li>
 
                             <li class="menu-item" aria-haspopup="true">
-                                <a href="/info" class="menu-link">
+                                <a href="/information" class="menu-link">
                                     <i class="menu-icon flaticon2-graph-1"></i>
                                     <span class="menu-text">Info</span>
                                 </a>
@@ -152,8 +152,8 @@
                             <div class="topbar-item">
                                 <div class="update-hover"
                                     id="">
-                                    <Button id="btn-signup" class="btnAuth"><a style="color: white;font-weight: 500;" href="/register">Đăng ký</a></Button>
-                                    <Button id="btn-login" class="btnAuth"><a style="color: white;font-weight: 500;" href="/login">Đăng nhập</a></Button>
+                                    <Button id="btn-signup" class="btnAuth"><a style="color: white;font-weight: 500;" href="/register">Sign Up</a></Button>
+                                    <Button id="btn-login" class="btnAuth"><a style="color: white;font-weight: 500;" href="/login">Sign In</a></Button>
                                 </div>
                             </div>
 
@@ -276,16 +276,20 @@
     </script>
     <!--end::Global Config-->
     <!--begin::Global Theme Bundle(used by all pages)-->
-    <script src="/frontend/assets/plugins/global/plugins.bundle.js"></script>
-    <script src="/frontend/assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
-    <script src="/frontend/assets/js/scripts.bundle.js"></script>
+    <script src="/Frontend/assets/plugins/global/plugins.bundle.js"></script>
+    <script src="/Frontend/assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
+    <script src="/Frontend/assets/js/scripts.bundle.js"></script>
     <!--end::Global Theme Bundle-->
     <!--begin::Page Vendors(used by this page)-->
-    <script src="/frontend/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+    <script src="/Frontend/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
     <!--end::Page Vendors-->
     <!--begin::Page Scripts(used by this page)-->
-    <script src="/frontend/assets/js/pages/widgets.js"></script>
+    <script src="/Frontend/assets/js/pages/widgets.js"></script>
     <!--end::Page Scripts-->
+
+    <script src="/Frontend/assets/js/pages/information.js"></script>
+    <script src="/Frontend/assets/js/pages/change-password.js"></script>
+
 </body>
 <!--end::Body-->
 

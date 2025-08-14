@@ -19,7 +19,6 @@ function register() {
         },
         error: function (xhr, status, error) {
             if (xhr.status === 422) {
-                console.log(xhr.responseJSON);
                 const errors = xhr.responseJSON.errors;
                 $.each(errors, function (key, messages) {
                     if (key === "password" && messages[0].includes("Mật khẩu xác nhận không khớp")) {
@@ -29,7 +28,6 @@ function register() {
                     }
                 });
             }
-            console.log(xhr.responseText);
         }
     });
 }

@@ -1,24 +1,24 @@
-function login() {
-
+function addUser() {
     const data = {
         email: $('#email').val(),
+        name: $('#name').val(),
+        phone: $('#phone').val(),
         password: $('#password').val(),
+        password_confirmation: $('#confirmPassword').val(),
+        role: $('#role').val(),
     };
 
     $.ajax({
-        url: "/api/login",
+        url: "/api/add-user",
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify(data),
+        headers: {
+            'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+        },
         success: function (response) {
             alert(response.message);
-            if(response.data.user.role === "user"){
-                window.location.href="/home"
-            } else{
-                window.location.href="/admin/dashboard"
-            }
-            sessionStorage.setItem('email', email.value);
-            sessionStorage.setItem('id', response.data.user.id);
+            $('#kt_form').trigger('reset');
         },
         error: function (xhr, status, error) {
             if (xhr.status === 422) {
@@ -27,16 +27,12 @@ function login() {
                     $(`#${key}-error`).text(messages[0]);
                 });
             }
-            if (xhr.status === 400) {
-                
-                alert(xhr.responseJSON.message);
-            }
         }
     });
 }
 
-$(document).on('click', '#login-btn', function (event) {
+$(document).on('click', '#addUser-btn', function (event) {
     event.preventDefault();
     $('.error').text('');
-    login();
+    addUser();
 });

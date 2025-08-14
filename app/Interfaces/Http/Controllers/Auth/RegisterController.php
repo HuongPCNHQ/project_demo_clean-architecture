@@ -3,8 +3,8 @@
 namespace App\Interfaces\Http\Controllers\Auth;
 
 use App\Interfaces\Http\Controllers\Controller;
-use App\Core\Application\UseCase\AuthUsecase;
-use App\Interfaces\Http\Requests\RegisterRequest;
+use App\Core\Application\UseCase\Auth\AuthUsecase;
+use App\Interfaces\Http\Requests\Auth\RegisterRequest;
 use App\Core\Domain\DTO\DataResult;
 
 class RegisterController extends Controller{

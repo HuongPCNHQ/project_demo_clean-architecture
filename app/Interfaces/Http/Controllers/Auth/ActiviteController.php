@@ -3,9 +3,8 @@
 namespace App\Interfaces\Http\Controllers\Auth;
 
 use App\Interfaces\Http\Controllers\Controller;
-use App\Core\Application\UseCase\AuthUsecase;
-use App\Interfaces\Http\Requests\ActiveRequest;
-use App\Core\Domain\DTO\DataResult;
+use App\Core\Application\UseCase\Auth\AuthUsecase;
+use App\Interfaces\Http\Requests\Auth\ActiveRequest;
 use Exception;
 
 class ActiviteController extends Controller

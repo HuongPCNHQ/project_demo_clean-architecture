@@ -3,10 +3,10 @@
 namespace App\Interfaces\Http\Controllers\Auth;
 
 use App\Interfaces\Http\Controllers\Controller;
-use App\Core\Application\UseCase\AuthUsecase;
+use App\Core\Application\UseCase\Auth\AuthUsecase;
 use App\Core\Domain\DTO\DataResult;
-use App\Interfaces\Http\Requests\ForgotPassRequest;
-use App\Interfaces\Http\Requests\ResetPassRequest;
+use App\Interfaces\Http\Requests\Auth\ForgotPassRequest;
+use App\Interfaces\Http\Requests\Auth\ResetPassRequest;
 use Exception;
 
 class ForgotPassController extends Controller{
